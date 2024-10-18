@@ -1,0 +1,21 @@
+managed implementation in class zbp_pru_root_entity unique;
+strict ( 2 );
+
+define behavior for ZPRU_ROOT_ENTITY alias ROOT
+persistent table zpru_dn
+lock master
+authorization master ( instance )
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) dn_no, freq, prod;
+
+  //Flat
+  action sendEntity parameter ZPRU_ABS_ENTITY;
+  // Deep
+  action sendEntity2 deep parameter ZPRU_ABS_ENTITY;
+  // Deep Table
+  action sendEntity3 deep table parameter ZPRU_ABS_ENTITY;
+
+}

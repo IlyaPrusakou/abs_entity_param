@@ -1,0 +1,5 @@
+CLASS zbp_pru_root_entity DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zpru_root_entity.
+ENDCLASS.
+
+CLASS zbp_pru_root_entity IMPLEMENTATION.
+ENDCLASS.

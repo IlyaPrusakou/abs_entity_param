@@ -1,0 +1,26 @@
+abstract;
+strict ( 2 );
+with hierarchy;
+
+define behavior for ZPRU_ABS_ENTITY alias ABS
+{
+  association CHILD;
+  association CHILD_2;
+}
+
+define behavior for ZPRU_ABS_CHILD alias CHILD
+{
+
+  association ROOT;
+
+}
+
+define behavior for zpru_abs_child_2 {
+
+association third_level;
+
+}
+
+define behavior for zpru_abs_child_3 {
+association child_with with hierarchy;
+}
